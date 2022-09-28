@@ -4,10 +4,11 @@ import { useDispatch } from 'react-redux';
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import { googleSignInStart, emailSignInStart } from '../../store/user/user.action'
-
 import { SignInContainer, ButtonsContainer } from './sign-in-form.styles';
-import { onEmailSignInStart } from '../../store/user/user.saga';
+import {
+  googleSignInStart,
+  emailSignInStart,
+} from '../../store/user/user.action';
 
 const defaultFormFields = {
   email: '',
@@ -18,7 +19,6 @@ const SignInForm = () => {
   const dispatch = useDispatch();
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
-
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -32,7 +32,7 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      dispatch(emailSignInStart(email, password))
+      dispatch(emailSignInStart(email, password));
       resetFormFields();
     } catch (error) {
       console.log('user sign in failed', error);
