@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '../button/button.component';
 
 export const PaymentFormContainer = styled.div`
+  min-width: 410px;
   border: 1px solid darkgrey;
   padding: 10px;
   width:100%;
