@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 
 import { useSelector } from 'react-redux';
 import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector';
