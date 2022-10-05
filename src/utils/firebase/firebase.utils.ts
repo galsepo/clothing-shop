@@ -1,3 +1,4 @@
+import { Category } from '../../store/categories/category.types';
 import { initializeApp } from 'firebase/app';
 import {
   getAuth,
@@ -32,7 +33,6 @@ const firebaseConfig = {
   appId: "1:832763212493:web:aab7cd6c2b63c1bbf26f84"
 };
 
-import { Category } from '../../store/categories/category.types';
 
 const firebaseApp = initializeApp(firebaseConfig);
 
