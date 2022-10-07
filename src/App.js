@@ -5,7 +5,6 @@ import { useEffect, lazy, Suspense } from 'react';
 
 import { checkUserSession } from './store/user/user.action';
 import Spinner from './components/spinner/spinner.component';
-
 const Navigation = lazy(() =>
   import('./routes/navigation/navigation.component')
 );
@@ -27,6 +26,7 @@ const App = () => {
   }, []);
 
   return (
+
     <Suspense fallback={<Spinner />}>
       <Routes>
         <Route path='/' element={<Navigation />}>
@@ -37,6 +37,7 @@ const App = () => {
         </Route>
       </Routes >
     </Suspense>
+
   );
 };
 

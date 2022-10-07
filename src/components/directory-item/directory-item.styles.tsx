@@ -5,11 +5,12 @@ type BackgroundImageProps = {
 };
 
 export const BackgroundImage = styled.div<BackgroundImageProps>`
-  width: 100%;
+width: 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  
 `;
 
 export const Body = styled.div`
@@ -23,6 +24,14 @@ export const Body = styled.div`
   background-color: white;
   opacity: 0.7;
   position: absolute;
+  
+  @media screen and (max-width: 800px) {
+    padding: 0 5px;
+    width: 30%;
+       }
+   
+
+  }
 
   h2 {
     font-weight: bold;
@@ -30,12 +39,20 @@ export const Body = styled.div`
     font-size: 22px;
     color: #4a4a4a;
     text-transform: uppercase;
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+         }
   }
 
   p {
     font-weight: lighter;
     font-size: 16px;
+    @media screen and (max-width: 800px) {
+      font-size: 13px;
+         }
   }
+
+ 
 `;
 
 export const DirectoryItemContainer = styled.div`
@@ -69,4 +86,6 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
+
+ 
 `;
